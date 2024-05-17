@@ -24,7 +24,7 @@ async function start() {
   try {
     await mongoose.connect(process.env.MONGO_URL);
 
-    app.listen("3030", async () => {
+    app.listen(process.env.PORT, async () => {
       console.log("server started");
     });
   } catch (e) {
