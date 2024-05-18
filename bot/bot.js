@@ -60,7 +60,7 @@ const launchBot = () => {
 
       if(msg.text.length > 6) {
           const refID = msg.text.slice(7);
-          if (msg.text.slice(7) !== refID) {
+          if (msg.from.id != refID) {
             await Bot.sendMessage(msg.chat.id, `You join be user's link with ID ${refID}`);
           }
        }
