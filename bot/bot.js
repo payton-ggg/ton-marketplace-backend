@@ -42,7 +42,7 @@ const launchBot = () => {
 
       const chatId = msg.from.id;
 
-      await Bot.sendMessage(chatId, `Welcome to Connect! 👋\n\nThe Connect quest bot is a product of the <b><a href='https://t.me/BaW_TON'>Black and White</a></b> ecosystem, aimed at developing the potential of The Open Network.\n\nPerform simple tasks from many of our partners and get acquaintance with colorful communities and a sea of tokens in return!`, {
+      await Bot.sendMessage(chatId, `Welcome to Connect! 👋\n\nThe Connect quest bot is a product of the <b>Black and White</b> ecosystem, aimed at developing the potential of The Open Network.\n\nPerform simple tasks from many of our partners and get acquaintance with colorful communities and a sea of tokens in return!`, {
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
@@ -60,7 +60,7 @@ const launchBot = () => {
 
       if(msg.text.length > 6) {
           const refID = msg.text.slice(7);
-          if (msg.text.slice(7) != refID) {
+          if (msg.text.slice(7) !== refID) {
             await Bot.sendMessage(msg.chat.id, `You join be user's link with ID ${refID}`);
           }
        }
