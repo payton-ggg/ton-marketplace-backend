@@ -24,7 +24,7 @@ const launchBot = () => {
 
   Bot.onText(/\/users/, async (msg, match) => {
     const userId = msg.from.id;
-    const { data: users } = await axios.get("https://my-personal-api-tf.onrender.com/api/users");
+    const { data: users } = await axios.get("http://my-personal-api-tf:10000/api/users");
   
     const createUserList = () =>
       users
