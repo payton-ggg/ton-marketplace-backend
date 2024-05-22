@@ -22,20 +22,20 @@ const launchBot = () => {
 
   Bot.setMyCommands(commands);
 
-  // Bot.onText(/\/users/, async (msg, match) => {
-  //   const userId = msg.from.id;
-  //   const { data: users } = await axios.get("http://localhost:3030/api/users");
-  //
-  //   const createUserList = () =>
-  //     users
-  //       .map(
-  //         (user, iter) =>
-  //           `${iter}. ${user.name} ${user.lastName}. Роль: ${user.role}. ID: ${user._id}`
-  //       )
-  //       .join("\n\n");
-  //
-  //   Bot.sendMessage(userId, createUserList());
-  // });
+  Bot.onText(/\/users/, async (msg, match) => {
+    const userId = msg.from.id;
+    const { data: users } = await axios.get("http://localhost:3030/api/users");
+  
+    const createUserList = () =>
+      users
+        .map(
+          (user, iter) =>
+            `${iter}. ${user.name} ${user.lastName}. Роль: ${user.role}. ID: ${user._id}`
+        )
+        .join("\n\n");
+  
+    Bot.sendMessage(userId, createUserList());
+  });
 
   Bot.onText(/\/start/, async (msg, match) => {
     try {
