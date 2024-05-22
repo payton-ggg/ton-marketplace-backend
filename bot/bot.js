@@ -30,7 +30,7 @@ const launchBot = () => {
       users
         .map(
           (user, iter) =>
-            `${iter}. ${user.name}. ID: ${user._id}`
+            `${iter}. ${user.username}. ID: ${user._id}. Balance: ${user.balance}`
         )
         .join("\n\n");
   
