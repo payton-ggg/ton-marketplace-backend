@@ -21,11 +21,6 @@ export const calculateBalanceSec = (incomeData, user) => {
   ) {
     increase();
   } else if (
-    incomeData.isMessComplete &&
-    incomeData.isMessComplete !== user.isMessComplete
-  ) {
-    increase();
-  } else if (
     incomeData.isWalComplete &&
     incomeData.isWalComplete !== user.isWalComplete
   ) {
