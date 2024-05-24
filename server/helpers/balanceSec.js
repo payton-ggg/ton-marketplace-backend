@@ -1,4 +1,4 @@
-export const calculateBalance = (incomeData, user) => {
+export const calculateBalanceSec = (incomeData, user) => {
   const AMOUNT = 30;
   let userBalance = user.balanceSec;
 
