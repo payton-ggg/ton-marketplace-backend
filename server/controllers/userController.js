@@ -45,8 +45,8 @@ export const updateUser = async (req, res) => {
         isXComplete: account.isXComplete,
         isTelegramComplete: account.isTelegramComplete,
         isMessComplete: account.isMessComplete,
-        isWalComplete: account.isWalComplete,
         balance: newBalance,
+        balanceSec: newBalanceSec,
       }
     );
 
