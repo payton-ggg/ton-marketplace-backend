@@ -1,13 +1,13 @@
 export const calculateBalanceSec = (incomeData, user) => {
   const AMOUNT = 30;
-  let userBalance = user.balanceSec;
+  let userBalanceSec = user.balanceSec;
 
   const increase = () => {
-    userBalance += AMOUNT;
+    userBalanceSec += AMOUNT;
   };
 
   const increaseSec = () => {
-    userBalance += 40;
+    userBalanceSec += 40;
   };
 
   if (
@@ -31,8 +31,8 @@ export const calculateBalanceSec = (incomeData, user) => {
   ) {
     increase();
   } else {
-    return userBalance;
+    return userBalanceSec;
   }
 
-  return userBalance;
+  return userBalanceSec;
 };
