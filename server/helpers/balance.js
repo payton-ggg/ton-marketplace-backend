@@ -11,11 +11,6 @@ export const calculateBalance = (incomeData, user) => {
   };
 
   if (
-    incomeData.isTelegramComplete &&
-    incomeData.isTelegramComplete !== user.isTelegramComplete
-  ) {
-    increaseSec();
-  } else if (
     incomeData.isXComplete &&
     incomeData.isXComplete !== user.isXComplete
   ) {
