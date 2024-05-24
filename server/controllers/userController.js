@@ -1,6 +1,8 @@
 import { User } from "../db.js";
 import { Bot } from "../../index.js";
 import { calculateBalance } from "../helpers/balance.js";
+import { calculateBalanceSec } from "../helpers/balanceSec.js";
+
 
 export const getUsers = async (req, res) => {
   try {
@@ -39,6 +41,7 @@ export const updateUser = async (req, res) => {
     const user = await User.findOne({ username: account.username });
 
     const newBalance = calculateBalance(account, user);
+    const newBalanceSec = calculateBalanceSec(account, user);
     const updatedUser = await User.findOneAndUpdate(
       { username: account.username },
       {
