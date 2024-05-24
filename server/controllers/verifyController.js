@@ -49,6 +49,7 @@ export const verifyTelegramInitData = async (req, res) => {
           isTelegramComplete: false,
           isMessComplete: false,
           balance: 0,
+          balanceSec: 0,
         });
       }
       console.log("asdhas", data)
